@@ -242,6 +242,11 @@
       <h2>Assalamu’alaikum Warahmatullahi wabarakatuh </h2>
       <p><strong> Dengan memohon rahmat dan ridho ALLAH SWT,</strong></p>
       <p>Kami mengundang Bapak/ibu/saudara/i untuk menghadiri syukuran Ngunduh mantu Putra-putri kami</p>
+
+      <!-- Tambahan personal nama tamu --> 
+       <p>Yth. Bapak/Ibu/Saudara/i</p> 
+       <p><strong id="guest-name">[Nama Tamu]</strong>
+      </p> <p>Di Tempat</p>
     </section>
 
     <section id="mempelai">
@@ -318,6 +323,12 @@
           });
         }
       }, 900);
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const guest = urlParams.get('to');
+    if(guest){
+      document.getElementById('guest-name').textContent = guest;
     }
 
     function toggleMusic(){
