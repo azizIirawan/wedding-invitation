@@ -1,281 +1,369 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Undangan Pernikahan Islami</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Undangan Pernikahan — Ade & Mei</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --theme-accent: #d4af37;
+      --theme-dark: #4b2e2e;
+      --theme-glow: rgba(212,175,55,0.4);
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Poppins&display=swap" rel="stylesheet">
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background: url('images/bg.png'), linear-gradient(180deg,#fff8f0,#f5e6d3);
+      background-size: 300px;
+      background-repeat: repeat;
+      color: #2e2e2e;
+    }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
+    /* Cover */
+    .cover {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      background: linear-gradient(135deg,var(--theme-dark),var(--theme-accent));
+    }
 
-body{
-  font-family:'Poppins',sans-serif;
-  background:
-    linear-gradient(rgba(245,248,245,.94),rgba(245,248,245,.94)),
-    url("https://images.unsplash.com/photo-1542816417-0983c9c9ad53");
-  background-size:cover;
-  background-attachment:fixed;
-  color:#1f3d2b;
-  text-align:center;
+    .ornamen-top {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: url('images/gunungan-top.png') no-repeat center;
+      background-size: contain;
+      width: 220px;
+      height: 160px;
+      opacity: 0.9;
+    }
+    .cover-subtitle {
+      font-family: 'Merriweather', serif;
+      font-size: 30px;
+      color: #8b4343;
+      
+      margin-top: 0px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(252, 253, 249, 0.8);
 }
 
-section{padding:70px 20px}
 
-h1,h2{
-  font-family:'Amiri',serif;
-  color:#0f3d2e;
-}
+    .cover-photo {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid var(--theme-accent);
+      box-shadow: 0 0 25px rgba(212,175,55,0.8);
+      margin-bottom: 20px;
+    }
 
-.hero{
-  height:100vh;
-  background:
-    linear-gradient(rgba(15,61,46,.75),rgba(15,61,46,.75)),
-    url("https://images.unsplash.com/photo-1586075010923-2dd4570fb338");
-  background-size:cover;
-  background-position:center;
-  color:white;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
+    .cover-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 90px;
+      margin: 0;
+      text-shadow: 0 0 25px rgba(212,175,55,0.9);
+    }
 
-.hero img{
-  width:160px;
-  height:160px;
-  border-radius:50%;
-  border:4px solid #d4af37;
-  margin:20px auto;
-}
+    .cover-date {
+      font-size: 22px;
+      margin-top: 0px;
+      letter-spacing: 2px;
+    }
 
-.card{
-  background:white;
-  max-width:900px;
-  margin:auto;
-  padding:40px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
+    .btn-open {
+      position: relative; 
+      overflow: hidden;
+      margin-top: 15px;
+      background: radial-gradient(circle at top left,#dee2b4,#aacb32);
+      color: #4b2e2e;
+      padding: 15px 50px;
+      border-radius: 40px;
+      font-weight: 700;
+      border: 3px solid #252c15;
+      cursor: pointer;
+      font-size: 20px;
+      box-shadow: 0 0 20px rgba(238, 185, 10, 0.6);
+    }
 
-.grid{
-  display:grid;
-  gap:25px;
-}
+    /* Efek kilau */ 
+    .btn-open::before { content: "";
+    position: absolute; 
+    top: 0; left: -75%; width: 50%; height: 100%; background: 
+    linear-gradient( 
+      120deg, transparent,rgba(255,255,255,0.6), 
+    transparent ); 
+    transform: skewX(-20deg); animation: shine 2s infinite; /* otomatis berulang */ }
+    
+    @keyframes shine { 0% { left: -75%; } 100% { left: 125%; } }
 
-.grid-2{
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-}
 
-button{
-  background:#0f6b4a;
-  border:none;
-  padding:14px 30px;
-  color:white;
-  border-radius:30px;
-  font-size:16px;
-  cursor:pointer;
-}
+    /* Isi Undangan */
+    main { display: none; }
+    section {
+      padding: 60px 24px;
+      margin: 30px auto;
+      max-width: 900px;
+      background: rgba(255,248,240,0.85);
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px var(--theme-glow);
+    }
 
-input,select,textarea{
-  width:100%;
-  padding:12px;
-  border-radius:10px;
-  border:1px solid #ccc;
-}
+    h2 {
+      font-family: 'Great Vibes', cursive;
+      color: var(--theme-accent);
+      margin-bottom: 16px;
+      font-size: 36px;
+    }
 
-.countdown{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-}
+    .btn, .btn-outline {
+      display: inline-block;
+      margin: 8px;
+      padding: 14px 22px;
+      border-radius: 40px;
+      font-weight: 700;
+      text-decoration: none;
+    }
 
-.time{
-  background:#0f6b4a;
-  color:white;
-  padding:15px;
-  border-radius:12px;
-  width:80px;
-}
+    .btn {
+      background: var(--theme-accent);
+      color: #fff;
+    }
 
-.gallery img{
-  width:100%;
-  border-radius:15px;
-}
+    .btn-outline {
+      border: 2px solid var(--theme-accent);
+      color: var(--theme-accent);
+      background: #fff;
+    }
 
-footer{
-  background:#e4efe9;
-  padding:30px;
-  font-size:14px;
-}
-</style>
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cd-box {
+      min-width: 100px;
+      background: #fff;
+      border: 2px solid var(--theme-accent);
+      border-radius: 20px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 0 20px var(--theme-glow);
+    }
+
+    .cd-num {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--theme-accent);
+    }
+
+    #music-control {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--theme-accent);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #5c3d2e;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .muted { color: #666; font-size: 14px; }
+
+    .flower {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      opacity: 0.9;
+      animation: fall linear forwards;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      to { transform: translateY(110vh) rotate(360deg); }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- MUSIK NASYID -->
-<audio autoplay loop>
-  <source src="https://cdn.pixabay.com/audio/2022/03/09/audio_78a7a6c2c3.mp3" type="audio/mpeg">
-</audio>
+  <!-- Cover -->
+  <section class="page" id="cover">
+    <div class="ornamen-top"></div>
+    <h2 class="cover-subtitle">Ngunduh Mantu</h2>
+    <img src="images/foto.png" alt="Foto Ade & Mei" class="cover-photo">
+    <h1 class="cover-title">Ade ❤️ Mei</h1>
+    <p class="cover-date">Minggu, 18 Januari 2026</p>
+    <button class="btn-open" onclick="openInvitation()">💍 Buka Undangan 💍</button>
+  </section>
 
-<!-- HEADER -->
-<section class="hero">
-  <h1>Ade & Mei</h1>
-  <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
-  <p>Ahad, 20 Juli 2026</p>
-</section>
+  <!-- Isi Undangan -->
+  <main id="invitation">
+    <audio id="bg-music" loop>
+      <source src="music/wedding-romantic-182518.mp3" type="audio/mpeg">
+    </audio>
 
-<!-- SALAM PEMBUKA -->
-<section>
-<div class="card">
-<h2>بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
-<p>
-Assalamu’alaikum Warahmatullahi Wabarakatuh<br><br>
-Dengan memohon rahmat dan ridho Allah SWT,
-kami mengundang Bapak/Ibu/Saudara/i
-untuk menghadiri pernikahan kami.
-</p>
-</div>
-</section>
+    <section id="hero">
+      <h2>Ngunduh Mantu</h2>
+      <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
+      <p>Minggu, 18 Januari 2026 — Palembang</p>
+      <div class="countdown">
+        <div class="cd-box"><div id="cd-days" class="cd-num">0</div><div>Hari</div></div>
+        <div class="cd-box"><div id="cd-hours" class="cd-num">0</div><div>Jam</div></div>
+        <div class="cd-box"><div id="cd-min" class="cd-num">0</div><div>Menit</div></div>
+        <div class="cd-box"><div id="cd-sec" class="cd-num">0</div><div>Detik</div></div>
+      </div>
+    </section>
 
-<!-- MEMPELAI -->
-<section>
-<div class="card grid grid-2">
-<div>
-<h2>Ade</h2>
-<p>Putra dari<br>Bapak … & Ibu …</p>
-</div>
-<div>
-<h2>Mei</h2>
-<p>Putri dari<br>Bapak … & Ibu …</p>
-</div>
-</div>
-</section>
+    <section id="salam">
+      <h2>بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
+      <h2>Assalamu’alaikum Warahmatullahi wabarakatuh </h2>
+      <p><strong> Dengan memohon rahmat dan ridho ALLAH SWT,</strong></p>
+      <p>Kami mengundang Bapak/ibu/saudara/i untuk menghadiri syukuran Ngunduh mantu Putra-putri kami</p>
+    </section>
 
-<!-- DETAIL ACARA -->
-<section>
-<div class="card grid grid-2">
-<div>
-<h2>Akad Nikah</h2>
-<p>
-Ahad, 20 Juli 2026<br>
-Pukul 08.00 WIB
-</p>
-</div>
-<div>
-<h2>Walimah</h2>
-<p>
-Ahad, 20 Juli 2026<br>
-Pukul 11.00 – 14.00 WIB
-</p>
-</div>
-</div>
-</section>
+    <section id="mempelai">
+      <h2>Mempelai</h2>
+      <p><strong>Ade</strong><br/>Putra dari Bapak Ahmad & Ibu Siti</p>
+      <hr>
+      <p><strong>Mei</strong><br/>Putri dari Bapak Budi & Ibu Lina</p>
+    </section>
 
-<!-- COUNTDOWN -->
-<section>
-<h2>Menuju Hari Bahagia</h2><br>
-<div class="countdown">
-<div class="time"><span id="d"></span><br>Hari</div>
-<div class="time"><span id="h"></span><br>Jam</div>
-<div class="time"><span id="m"></span><br>Menit</div>
-<div class="time"><span id="s"></span><br>Detik</div>
-</div>
-</section>
+    <section id="acara">
+      <h2>Detail Acara</h2>
+      <p><strong>Akad Nikah:</strong><br/>Minggu, 18 Januari 2026 pukul 08.00 WIB</p>
+      <p><strong>Resepsi:</strong><br/>Minggu, 18 Januari 2026 pukul 10.00 WIB</p>
+      <p><strong>Lokasi:</strong><br/>Gedung Serbaguna Palembang</p>
+    </section>
 
-<!-- MAPS -->
-<section>
-<div class="card">
-<h2>Lokasi Acara</h2>
-<p>Gedung Serbaguna Assanadiyah</p><br>
-<a href="https://maps.google.com" target="_blank">
-<button>Lihat Google Maps</button>
-</a>
-<br><br>
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://maps.google.com">
-</div>
-</section>
+    <section id="lokasi">
+      <h2>Lokasi</h2>
+      <p>Scan QR berikut untuk membuka Google Maps:</p>
+            <img src="images/QR.png" alt="QR Code Lokasi" width="200"/>
+      <div><a class="btn" href="https://maps.google.com" target="_blank">Buka Google Maps</a></div>
+    </section>
 
-<!-- GALERI -->
-<section>
-<div class="card">
-<h2>Kisah Singkat</h2>
-<p>
-“Dan di antara tanda-tanda kebesaran-Nya,
-Dia menciptakan pasangan hidup agar kamu merasa tenteram.”
-(QS. Ar-Rum: 21)
-</p><br>
-<div class="gallery grid grid-2">
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552">
-<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
-</div>
-</div>
-</section>
+    <section id="galeri">
+      <h2>Galeri</h2>
+      <p>Foto-foto kenangan prewedding kami:</p>
+      <img src="images/prewed.png" alt="Prewedding 1" width="250" style="margin:10px;border-radius:12px;">
+      <img src="images/prewed2.png" alt="Prewedding 2" width="250" style="margin:10px;border-radius:12px;">
+      <img src="images/prewed3.png" alt="Prewedding 3" width="250" style="margin:10px;border-radius:12px;">
+    </section>
 
-<!-- RSVP -->
-<section>
-<div class="card">
-<h2>Konfirmasi Kehadiran</h2>
-<button onclick="wa()">RSVP via WhatsApp</button>
-</div>
-</section>
+    <section id="rsvp">
+      <h2>Konfirmasi Kehadiran</h2>
+      <p>Silakan konfirmasi melalui WhatsApp atau isi Google Form:</p>
+      <a href="https://wa.me/6281234567890" class="btn" target="_blank">WhatsApp</a>
+      <a href="https://forms.gle/xxxx" class="btn-outline" target="_blank">Google Form</a>
+    </section>
 
-<!-- INFORMASI TAMBAHAN -->
-<section>
-<div class="card">
-<h2>Informasi Tambahan</h2>
-<p>👔 Dress Code: Sopan & Islami</p>
-<p>🙏 Mohon doa restu</p>
-</div>
-</section>
+    <section id="rekening">
+      <h2>Amplop Digital</h2>
+      <p>Bagi yang ingin berbagi tanda kasih, dapat melalui rekening berikut:</p>
+      <p><strong>Bank BCA</strong><br/>No. Rekening: 1234567890<br/>a.n. Ade & Mei</p>
+    </section>
 
-<!-- HADIAH -->
-<section>
-<div class="card">
-<h2>Hadiah Pernikahan</h2>
-<p>
-BCA 123456789<br>
-a.n Ade
-</p><br>
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=BCA123456789">
-</div>
-</section>
+    <section id="penutup">
+      <h2>Terima Kasih</h2>
+      <p>Terima kasih atas doa, perhatian, dan waktu berharga yang Anda luangkan. 
+      Semoga cinta yang menyatukan kami menjadi cahaya yang tak pernah padam, 
+      dan semoga kebahagiaan hari ini menjadi kenangan indah yang abadi.</p>
+      <p class="muted">Sampai jumpa di hari bahagia kami ✨</p>
+    </section>
+  </main>
 
-<!-- CLOSING -->
-<section>
-<div class="card">
-<h2>Jazakumullahu Khairan</h2>
-<p>
-Merupakan suatu kehormatan dan kebahagiaan bagi kami
-apabila Bapak/Ibu/Saudara/i berkenan hadir
-dan memberikan doa restu.
-</p>
-</div>
-</section>
+  <!-- Kontrol musik -->
+  <button id="music-control" onclick="toggleMusic()">🔊</button>
 
-<footer>
-© 2026 Ade & Mei<br>
-Undangan Pernikahan Islami
-</footer>
+  <footer>
+    <p>© 2026 Ade & Mei Ngunduh Mantu</p>
+  </footer>
 
-<script>
-const target=new Date("July 20, 2026 08:00:00").getTime();
-setInterval(()=>{
-  const now=new Date().getTime();
-  const diff=target-now;
-  document.getElementById("d").innerHTML=Math.floor(diff/(1000*60*60*24));
-  document.getElementById("h").innerHTML=Math.floor(diff%(1000*60*60*24)/(1000*60*60));
-  document.getElementById("m").innerHTML=Math.floor(diff%(1000*60*60)/(1000*60));
-  document.getElementById("s").innerHTML=Math.floor(diff%(1000*60)/1000);
-},1000);
+  <script>
+    function openInvitation(){
+      const cover = document.getElementById('cover');
+      const invitation = document.getElementById('invitation');
+      const music = document.getElementById('bg-music');
+      cover.style.transition = "opacity 1s ease";
+      cover.style.opacity = 0;
+      setTimeout(()=>{
+        cover.style.display = "none";
+        invitation.style.display = "block";
+        if(music){
+          music.play().catch(err=>{
+            console.log("Autoplay diblokir, klik tombol musik untuk mulai.", err);
+          });
+        }
+      }, 900);
+    }
 
-function wa(){
-  window.open(
-    "https://wa.me/6281234567890?text=Assalamu’alaikum,%20InsyaAllah%20saya%20akan%20hadir",
-    "_blank"
-  );
-}
-</script>
+    function toggleMusic(){
+      const music = document.getElementById('bg-music');
+      const btn = document.getElementById('music-control');
+      if(music.paused){ 
+        music.play(); 
+        btn.textContent="🔊"; 
+      } else { 
+        music.pause(); 
+        btn.textContent="🔈"; 
+      }
+    }
 
+    // Countdown
+    const targetDate = new Date("january 18, 2026 08:00:00 GMT+7").getTime();
+    setInterval(()=>{
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      const days = Math.max(0, Math.floor(distance/(1000*60*60*24)));
+      const hours = Math.max(0, Math.floor((distance%(1000*60*60*24))/(1000*60*60)));
+      const minutes = Math.max(0, Math.floor((distance%(1000*60*60))/(1000*60)));
+      const seconds = Math.max(0, Math.floor((distance%(1000*60))/1000));
+      document.getElementById("cd-days").textContent = days;
+      document.getElementById("cd-hours").textContent = hours;
+      document.getElementById("cd-min").textContent = minutes;
+      document.getElementById("cd-sec").textContent = seconds;
+    }, 1000);
+
+    // Animasi bunga jatuh
+    function dropFlowers(){
+      const symbols = ['❀','🌸','🌺'];
+      const colors = ['#d4af37','#e63946','#ffffff'];
+      for(let i=0;i<12;i++){
+        const flower = document.createElement('div');
+        flower.className='flower';
+        flower.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+        flower.style.left = Math.random()*100+'vw';
+        flower.style.color = colors[Math.floor(Math.random()*colors.length)];
+        flower.style.fontSize = (Math.random()*20+20)+'px';
+        flower.style.animationDuration = (Math.random()*3+3)+'s';
+        document.body.appendChild(flower);
+        setTimeout(()=>flower.remove(),4000);
+      }
+    }
+    setInterval(dropFlowers,2000);
+  </script>
 </body>
 </html>
