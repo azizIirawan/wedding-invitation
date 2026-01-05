@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Undangan Pernikahan — Ade & Mei</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+
+
+
   <style>
     :root {
       --theme-accent: #d4af37;
@@ -20,6 +23,8 @@
       background-repeat: repeat;
       color: #2e2e2e;
     }
+
+
 
     /* Cover */
     .cover {
@@ -49,11 +54,10 @@
       font-family: 'Merriweather', serif;
       font-size: 30px;
       color: #8b4343;
-      
       margin-top: 0px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      text-shadow: 0 0 10px rgba(252, 253, 249, 0.8);
+      text-shadow: 0 0 10px rgb(248, 249, 248);
 }
 
 
@@ -63,7 +67,7 @@
       object-fit: cover;
       border-radius: 50%;
       border: 6px solid var(--theme-accent);
-      box-shadow: 0 0 25px rgba(212,175,55,0.8);
+      box-shadow: 0 0 25px rgb(239, 248, 118);
       margin-bottom: 20px;
     }
 
@@ -105,6 +109,7 @@
     transform: skewX(-20deg); animation: shine 2s infinite; /* otomatis berulang */ }
     
     @keyframes shine { 0% { left: -75%; } 100% { left: 125%; } }
+
 
 
     /* Isi Undangan */
@@ -170,6 +175,182 @@
       color: var(--theme-accent);
     }
 
+    /* Profil Mempelai */
+.profil-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 60px auto;
+  max-width: 900px;
+}
+
+.profil-card {
+  background: rgba(255,248,240,0.9);
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 0 20px var(--theme-glow);
+  width: 280px;
+}
+
+.profil-foto {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid var(--theme-accent);
+  box-shadow: 0 0 15px var(--theme-glow);
+  margin-bottom: 16px;
+}
+
+.profil-nama {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: var(--theme-dark);
+  margin: 8px 0;
+}
+
+.profil-orangtua {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+.profil-quote { font-size: 14px; color: var(--theme-accent); margin-top: 12px; }
+
+
+.wedding-event {
+  padding: 60px 24px;
+  margin: 40px auto;
+  max-width: 700px;
+  background: linear-gradient(180deg,#fff8f0,#f5e6d3);
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(212,175,55,0.4);
+  position: relative;
+  border: 2px solid #f7d758dc;
+  background-image: url('images/floral.png'); /* tambahkan motif floral tipis */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.event-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  color: #36342e;
+  text-shadow: 0 0 15px rgba(212,175,55,0.7);
+  margin-bottom: 30px;
+}
+
+.event-card {
+  background: rgba(255,255,255,0.85);
+  border: 3px solid #d4af37;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(212,175,55,0.3);
+  display: inline-block;
+  animation: fadeIn 1.5s ease;
+}
+
+.event-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.event-subtitle {
+  font-family: 'Merriweather', serif;
+  font-size: 24px;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.event-date, .event-time, .event-location {
+  font-family: 'Merriweather', serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: #4b2e2e;
+  margin: 8px 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.love-story {
+  max-width: 900px;
+  margin: 60px auto;
+  text-align: center;
+  background: linear-gradient(180deg,#fff8f0,#f5e6d3);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 0 25px rgba(212,175,55,0.3);
+}
+
+.story-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 42px;
+  color: #d4af37;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.story-timeline {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.story-item {
+  background: #fff;
+  border: 2px solid #d4af37;
+  border-radius: 16px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 0 15px rgba(212,175,55,0.2);
+}
+
+.story-item h3 {
+  color: #d4af37;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+
+.rsvp-section {
+  max-width: 820px;
+  margin: 60px auto;
+  padding: 40px;
+  background: linear-gradient(180deg,#fff8f0,#f5e6d3);
+  border-radius: 24px;
+  box-shadow: 0 0 25px rgba(212,175,55,0.3);
+  text-align: center;
+}
+
+.rsvp-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 42px;
+  color: #d4af37;
+  margin-bottom: 16px;
+}
+
+.rsvp-text {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  color: #4b2e2e;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.rsvp-form input, .rsvp-form textarea, .rsvp-form select { width: 100%; margin: 10px 0; padding: 14px; border: 2px solid #d4af37; border-radius: 12px; background: #fffaf5; font-size: 16px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); }
+
+
+.rsvp-form button { background: linear-gradient(to right, #d4af37, #eec373); color: #fff; font-size: 18px; padding: 12px 24px; border: none; border-radius: 12px; cursor: pointer; transition: transform 0.2s ease; } .rsvp-form button:hover { transform: scale(1.05); } .comments-list { margin-top: 40px; text-align: left; } .comments-list h3 { font-size: 24px; color: #d4af37; margin-bottom: 16px; } .comment-item { list-style: none; margin-bottom: 16px; } .comment-card { background: #fff; border: 2px solid #d4af37; border-radius: 12px; padding: 16px; box-shadow: 0 4px 12px rgba(212,175,55,0.2); }
+
+
     #music-control {
       position: fixed;
       bottom: 20px;
@@ -185,9 +366,9 @@
     }
 
     footer {
-      background: #5c3d2e;
+      background: hsl(57, 75%, 41%);
       color: #fff;
-      padding: 20px;
+      padding: 12px;
       text-align: center;
     }
 
@@ -225,10 +406,16 @@
       <source src="music/wedding-romantic-182518.mp3" type="audio/mpeg">
     </audio>
 
-    <section id="hero">
+    <section id="hero" class="relative h-[1000px] bg-cover bg-center text-white flex flex-col items-center justify-center"
+  style="background-image: url('images/prewed4.png'); background-size: 100%;">
+
+      <!-- Overlay transparan --> 
+       <div class="absolute inset-0 bg-black bg-opacity-40"></div> 
+       <!-- Konten teks --> 
+        <div class="relative z-10 text-center"></div>
       <h2>Ngunduh Mantu</h2>
-      <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
       <p>Minggu, 18 Januari 2026 — Palembang</p>
+      
       <div class="countdown">
         <div class="cd-box"><div id="cd-days" class="cd-num">0</div><div>Hari</div></div>
         <div class="cd-box"><div id="cd-hours" class="cd-num">0</div><div>Jam</div></div>
@@ -249,41 +436,120 @@
       </p> <p>Di Tempat</p>
     </section>
 
-    <section id="mempelai">
-      <h2>Mempelai</h2>
-      <p><strong>Ade</strong><br/>Putra dari Bapak Ahmad & Ibu Siti</p>
-      <hr>
-      <p><strong>Mei</strong><br/>Putri dari Bapak Budi & Ibu Lina</p>
+    <section id = "surah">
+<p><strong>وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا
+لِتَسْكُنُوا إِلَيْهَا
+وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً
+إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ</strong></p>
+<p>(QS. Ar-Rum : 21)</p>
+<p>"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri agar kamu merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang"</p>
+
     </section>
 
-    <section id="acara">
-      <h2>Detail Acara</h2>
-      <p><strong>Akad Nikah:</strong><br/>Minggu, 18 Januari 2026 pukul 08.00 WIB</p>
-      <p><strong>Resepsi:</strong><br/>Minggu, 18 Januari 2026 pukul 10.00 WIB</p>
-      <p><strong>Lokasi:</strong><br/>Gedung Serbaguna Palembang</p>
-    </section>
+   <section class="profil-section">
+  <div class="profil-card">
+    <img src="images/prewed.png" alt="Mempelai Pria" class="profil-foto">
+    <h3 class="profil-nama">Ade Dwi Prasetyo</h3>
+    <p class="profil-orangtua">Putra ke-2 dari Bapak ngatno(alm) & Ibu Sri Wahyuni</p>
+    <p class="profil-quote">“Semoga menjadi imam yang penuh kasih dan sabar.”</p>
+  </div>
+
+  <div class="profil-card">
+    <img src="images/prewed3.png" alt="Mempelai Wanita" class="profil-foto">
+    <h3 class="profil-nama">Meilastri</h3>
+    <p class="profil-orangtua">Putri ke-3 dari Bapak Zulkipil & Ibu Hj. Fatimah</p>
+    <p class="profil-quote">“Semoga menjadi istri yang penuh cinta dan pengertian.”</p>
+  </div>
+</section>
+
+
+  <section class="wedding-event">
+  <h2 class="event-title">Celebration of Love</h2>
+  <div class="event-card">
+    <div class="event-icon">🌸</div>
+    <h3 class="event-subtitle">Acara Resepsi</h3>
+    <p class="event-date">Minggu, 18 Januari 2026</p>
+    <p class="event-time">Pukul 12.00 WIB – selesai</p>
+     <p class="event-location"><strong> JL KH. balqi lr yakin 4 </strong></p>
+  </div>
+</section>
+
+<section class="love-story">
+  <h2 class="story-title"> Love Story</h2>
+  <div class="story-timeline">
+    <div class="story-item">
+      <h3>2018</h3>
+      <p>Tidak ada yang kebetulan didunia ini. Semua sudah tersusun dengan sangat rapi, oleh sang Maha Kuasa, kita tidak bisa memilih kepada siapa kita akan jatuh cinta, dan kami bertemu pertama kalinya di tahun 2021 lewat sahabat kami.</p>
+    </div>
+    <div class="story-item">
+      <h3>2020</h3>
+      <p>Katanya cinta dapat tumbuh dengan kebersamaan, seiring berjalan nya waktu kami semakin dekat dan memulai 
+        hubungan di tanggal 4 April 2022 terasa iseng, tapi ternyata pertemuan tanpa sengaja ini 
+        membawa kami pada hal yang lebih serius, begitu banyak kecocokan dan seimbangnya hubungan ini sampai tak terasa ternyata kami sudah menjalin hubungan hampir 4 thn lamanya.</p>
+    </div>
+    <div class="story-item">
+      <h3>2025</h3>
+      <p>Kehendaknya menuntun kami pada sebuah pertemuan yang tak pernah disangka hingga 
+        akhirnya pada 19 Oktober 2025 kemarin membawa kami pada sebuah ikatan yang Allah ridhoi.
+          Ikatan ini tidak hanya mempersatukan 2 orang saja melainkan ikatan ini juga mempersatukan 2 keluarga besar kami.</p>
+    </div>
+    <div class="story-item">
+      <h3>2026</h3>
+      <p>Hari bahagia: akad nikah & resepsi.</p>
+    </div>
+  </div>
+</section>
+
+
+
 
     <section id="lokasi">
       <h2>Lokasi</h2>
       <p>Scan QR berikut untuk membuka Google Maps:</p>
             <img src="images/QR.png" alt="QR Code Lokasi" width="200"/>
-      <div><a class="btn" href="https://maps.google.com" target="_blank">Buka Google Maps</a></div>
+      <div><a class="btn" href="https://goo.gl/maps/Lh6ctEWmaUxxa8dd9" target="_blank">Buka Google Maps</a></div>
     </section>
 
     <section id="galeri">
       <h2>Galeri</h2>
       <p>Foto-foto kenangan prewedding kami:</p>
       <img src="images/prewed.png" alt="Prewedding 1" width="250" style="margin:10px;border-radius:12px;">
+      <img src="images/prewed1.png" alt="Prewedding 1" width="250" style="margin:10px;border-radius:12px;">
       <img src="images/prewed2.png" alt="Prewedding 2" width="250" style="margin:10px;border-radius:12px;">
       <img src="images/prewed3.png" alt="Prewedding 3" width="250" style="margin:10px;border-radius:12px;">
+      <img src="images/prewed5.png" alt="Prewedding 3" width="250" style="margin:10px;border-radius:12px;">
+
     </section>
 
-    <section id="rsvp">
-      <h2>Konfirmasi Kehadiran</h2>
-      <p>Silakan konfirmasi melalui WhatsApp atau isi Google Form:</p>
-      <a href="https://wa.me/6281234567890" class="btn" target="_blank">WhatsApp</a>
-      <a href="https://forms.gle/xxxx" class="btn-outline" target="_blank">Google Form</a>
-    </section>
+    <section class="rsvp-section">
+  <h2 class="rsvp-title">RSVP</h2>
+  <p class="rsvp-text">Silakan isi nama, ucapan, dan konfirmasi kehadiran Anda di bawah.</p>
+
+  <form id="rsvpForm" class="rsvp-form">
+    <input type="text" id="nama" placeholder="Nama Anda" required>
+    <textarea id="ucapan" placeholder="Ucapan untuk pengantin" required></textarea>
+    <select id="status" required>
+      <option value="">Konfirmasi Kehadiran</option>
+      <option value="Hadir">Hadir</option>
+      <option value="Tidak Hadir">Tidak Hadir</option>
+    </select>
+    <button type="submit">Kirim 💗</button>
+  </form>
+
+  <div class="comments-list">
+    <h3>Komentar Tamu</h3>
+    <ul id="commentList"></ul>
+  </div>
+</section>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+
+
+    
+  
+            
 
     <section id="rekening">
       <h2>Amplop Digital</h2>
@@ -359,9 +625,46 @@
       document.getElementById("cd-sec").textContent = seconds;
     }, 1000);
 
+    const firebaseConfig = {
+  apiKey: "AIzaSyD2iR46huJrFJdCs0r3RJNaLUVe0AqsBs",
+  authDomain: "sincan-2e9bf.firebaseapp.com",
+  databaseURL: "https://sincan-2e9bf-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "sincan-2e9bf",
+  storageBucket: "sincan-2e9bf.appspot.com",
+  messagingSenderId: "969303728812",
+  appId: "1:969303728812:web:bc16ff9c3fe93b86330509",
+  measurementId: "G-R7636QT513"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+const form = document.getElementById('rsvpForm'); 
+const commentList = document.getElementById('commentList'); 
+// Simpan data RSVP 
+form.addEventListener('submit', function(e) { 
+  e.preventDefault(); // cegah reload halaman 
+  const nama = document.getElementById('nama').value.trim(); const ucapan = document.getElementById('ucapan').value.trim(); const status = document.getElementById('status').value; if (!nama || !ucapan || !status) return; db.ref('rsvp').push({ nama, ucapan, status, timestamp: Date.now() }); form.reset(); });
+
+db.ref('rsvp').on('child_added', function(snapshot) {
+  const data = snapshot.val();
+  const li = document.createElement('li');
+  li.classList.add('comment-item');
+  li.innerHTML = `
+    <div class="comment-card">
+      <strong>${data.nama}</strong><br>
+      <span>"${data.ucapan}"</span><br>
+      <em>Status: ${data.status}</em>
+    </div>
+  `;
+  document.getElementById('commentList').appendChild(li);
+});
+
+
+
     // Animasi bunga jatuh
     function dropFlowers(){
-      const symbols = ['❀','🌸','🌺'];
+      const symbols = ['❀','🌸','🌺','*','❤️','*','*'];
       const colors = ['#d4af37','#e63946','#ffffff'];
       for(let i=0;i<12;i++){
         const flower = document.createElement('div');
