@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -412,7 +412,49 @@
 .rsvp-form button { 
   background: linear-gradient(to right, #d4af37, #eec373); 
   color: #fff; font-size: 18px; 
-  padding: 12px 24px; border: none; border-radius: 12px; cursor: pointer; transition: transform 0.2s ease; } .rsvp-form button:hover { transform: scale(1.05); } .comments-list { margin-top: 40px; text-align: left; } .comments-list h3 { font-size: 24px; color: #d4af37; margin-bottom: 16px; } .comment-item { list-style: none; margin-bottom: 16px; } .comment-card { background: #fff; border: 2px solid #d4af37; border-radius: 12px; padding: 16px; box-shadow: 0 4px 12px rgba(212,175,55,0.2); }
+  padding: 12px 24px; border: none; border-radius: 12px; cursor: pointer; transition: transform 0.2s ease; } 
+  .rsvp-form button:hover { transform: scale(1.05); } 
+  
+  .comments-list {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #fffaf5;
+  border-radius: 12px;
+}
+
+.comments-list h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #8b4513;
+}
+
+#commentList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#commentList li {
+  background-color: #fff8f0;
+  border: 2px solid #f4c430; /* kuning elegan */
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 0 8px rgba(244, 196, 48, 0.4); /* glow kuning */
+}
+
+.comment-name {
+  font-weight: bold;
+  color: #8b4513;
+  margin-bottom: 4px;
+}
+
+.comment-message {
+  font-style: italic;
+  color: #333;
+}
+
 
 
   #salam {
@@ -620,7 +662,7 @@ Ikatan ini tidak hanya mempersatukan 2 orang saja melainkan ikatan ini juga memp
 
     <section id="lokasi">
       <h2>Lokasi</h2>
-      <p>Scan QR berikut untuk membuka Google Maps:</p>
+      <p>Dengan izin Allah, semoga perjalanan Anda lancar. Gunakan QR untuk petunjuk arah</p>
             <img src="images/QR.png" alt="QR Code Lokasi" width="200"/>
       <div><a class="btn" href="https://goo.gl/maps/Lh6ctEWmaUxxa8dd9" target="_blank">Buka Google Maps</a></div>
     </section>
@@ -643,24 +685,26 @@ Ikatan ini tidak hanya mempersatukan 2 orang saja melainkan ikatan ini juga memp
 
     <section class="rsvp-section">
   <h2 class="rsvp-title">RSVP</h2>
-  <p class="rsvp-text">Silakan isi nama, ucapan, dan konfirmasi kehadiran Anda di bawah.</p>
+  <p class="rsvp-text">Kami sangat menantikan kehadiran Anda. Silakan isi form RSVP ini untuk berbagi doa dan ucapan.</p>
 
+  <section>
   <form id="rsvpForm" class="rsvp-form">
     <input type="text" id="nama" placeholder="Nama Anda" required>
-    <textarea id="ucapan" placeholder="berikan doa dan ucapan" required></textarea>
+    <textarea id="ucapan" placeholder="Berikan doa dan ucapan" required></textarea>
     <select id="status" required>
       <option value="">Konfirmasi Kehadiran</option>
       <option value="Hadir">Hadir</option>
       <option value="Tidak Hadir">Tidak Hadir</option>
     </select>
-    <button type="submit">Kirim </button>
+    <button type="submit">Kirim</button>
   </form>
 
   <div class="comments-list">
-    <h3 >comment</h3>
+    <h3>Komentar</h3>
     <ul id="commentList"></ul>
   </div>
 </section>
+
 
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
@@ -673,7 +717,7 @@ Ikatan ini tidak hanya mempersatukan 2 orang saja melainkan ikatan ini juga memp
 
     <section id="profil-nama">
       <h2 >wedding gift</h2>
-      <p>Bagi yang ingin berbagi tanda kasih, dapat melalui rekening berikut:</p>
+      <p>Hadiah ini bukan sekadar benda, melainkan doa agar rumah tangga kalian penuh berkah</p>
       <p><strong>Bank BCA</strong><br/>No. Rekening: 8490406141<br/>a.n. Ade dwi prasetyo</p>
       <p><strong>Seabank</strong><br/>No. Rekening: 901156268029<br/>Meilastri</p>
 
